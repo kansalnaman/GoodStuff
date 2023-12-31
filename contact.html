@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        /* Use a box model that adds padding and border to the element's width and height */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Define a custom font for the page */
+        @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define a container for the page content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Define a header for the page title */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Define a style for the page title */
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* Define a style for the page subtitle */
+        .header p {
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+        }
+
+        /* Define a form for the contact details */
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Define a style for the form labels */
+        .form label {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Define a style for the form inputs */
+        .form input, .form textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 300;
+            color: #333;
+            outline: none;
+        }
+
+        /* Define a style for the form inputs on focus */
+        .form input:focus, .form textarea:focus {
+            border-color: #999;
+        }
+
+        /* Define a style for the form submit button */
+        .form button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Define a style for the form submit button on hover */
+        .form button:hover {
+            background-color: #444;
+        }
+
+        /* Define a media query for smaller screens */
+        @media (max-width: 600px) {
+            /* Make the form inputs take full width */
+            .form input, .form textarea {
+                width: 100%;
+            }
+
+            /* Make the form inputs stack vertically */
+            .form > div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you!</p>
+        </div>
+        <div class="form">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="10" placeholder="Enter your message" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
